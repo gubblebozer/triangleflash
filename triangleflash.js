@@ -47,15 +47,20 @@ function setup()
 
 function draw()
 {
-    background(0xff, 0xff, 0xd4);
-    stroke(0, 0, 0);
+    background(0xff);
     textSize(28);
-    fill(0);
-        
+
     // triangle
-    text(a, 50, 350);
-    text(b, 350, 350);
-    text(c, 200, 50);
+    fill(0xff, 0xff, 0xd4);
+    stroke(0xff, 0xff, 0xd4);
+    triangle(0, 400, 200, 0, 400, 400);
+    stroke(0, 0, 0);
+    fill(0);
+    text(a, 75, 350);
+    text(b, 325, 350);
+    text(c, 200, 75);
+    text("x,÷", 200, 225);
+    text("•", 200, 20);
 
     // scoreboard
     textSize(20);
@@ -72,19 +77,19 @@ function draw()
     var y = 0;
     switch (hidden) {
     case 'a':
-      x = 50;
+      x = 75;
       y = 350;
       break;
     case 'b':
-      x = 350;
+      x = 325;
       y = 350;
       break;
     case 'c':
       x = 200;
-      y = 50;
+      y = 75;
       break;
     }
-    textSize(36);    
+    textSize(36);
     stroke(0xde, 0xde, 0xa2);
     fill(0xde, 0xde, 0xa2);
     circle(x, y, 50);
@@ -155,7 +160,7 @@ function keyPressed()
     default:
       break;
   }
-  
+
   switch (keyCode) {
     case DELETE:
     case BACKSPACE:
